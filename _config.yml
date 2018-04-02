@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
+title: Renee Barker
+subtitle: 
 description:
 keywords:
-author: John Doe
+author: Renee Barker
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://reneebarker.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -72,10 +72,30 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+plugins:
+   - hexo-deployer-s3
+   - hexo-generator-podcast
+   - hexo-instagram-wall
+#  - hexo-tag-flickr
+#  - hexo-tag-instagram
+#  - hexo-tag-spotify
+#  - hexo-tag-twitter
+#  - hexo-tag-vine
+
+# Flickr API key
+#flickr_api_key: <Your API key>
+
+# Enable Cache file
+#flickr_cache_file_path: hexo-tag-flickr-cache.json
+#flickr_cache_expires: 2592000000
+
 ## Themes: https://hexo.io/themes/
 theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: s3
+  bucket: reneebarker.com
+  region: ap-southeast-2
+  aws_cli_profile: default
